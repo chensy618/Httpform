@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Login</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loginForm = document.getElementById("login-form");
+      const signupForm = document.getElementById("signup-form");
+
+      loginForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const username = loginForm.username.value;
+        const password = loginForm.password.value;
+
+        if (username && password) {
+          document.cookie = "session=abc123; path=/";
+          window.location.href = "dashboard.html";
+        } else {
+          alert("Please input credentials!");
+        }
+      });
+
+      signupForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Sign Up form submitted successfully!");
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="login-wrap">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+    <label for="tab-1" class="tab">Sign In</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up">
+    <label for="tab-2" class="tab">Sign Up</label>
+    <div class="login-form">
+      <div class="sign-in-htm">
+        <form id="login-form" method="POST">
+          <div class="group">
+            <label for="username" class="label">Username</label>
+            <input id="username" name="username" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="password" class="label">Password</label>
+            <input id="password" name="password" type="password" class="input">
+          </div>
+          <div class="group">
+            <input id="check" type="checkbox" class="check" checked>
+            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="Sign In">
+          </div>
+        </form>
+      </div>
+      <div class="sign-up-htm">
+        <form id="signup-form" method="POST">
+          <div class="group">
+            <label class="label">Username</label>
+            <input name="username" type="text" class="input">
+          </div>
+          <div class="group">
+            <label class="label">Password</label>
+            <input name="password" type="password" class="input">
+          </div>
+          <div class="group">
+            <label class="label">Repeat Password</label>
+            <input name="repeat_password" type="password" class="input">
+          </div>
+          <div class="group">
+            <label class="label">Email Address</label>
+            <input name="email" type="text" class="input">
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="Sign Up">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

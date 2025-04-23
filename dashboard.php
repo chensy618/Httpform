@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://chensy618.github.io/Httpform/stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 <div class="login-wrap">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="hr"></div>
                 <div class="foot-lnk">
-                    <a href="https://chensy618.github.io/Httpform/index.html" style="color: #fff;">Logout</a>
+                    <a href="index.php" style="color: #fff;">Logout</a>
                 </div>
             </div>
         </div>
